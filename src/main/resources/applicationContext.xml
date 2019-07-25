@@ -15,4 +15,11 @@
 
         </constructor-arg>
     </bean>
+
+    <bean id="myCricketCoach"
+          class="com.gerard.springframework.springdarbyiocxml.com.luv2code.springdemo.CricketCoach">
+
+        <!-- Setter injection-->
+        <property name="fortuneService" ref="myFortune"></property>
+    </bean>
 </beans>

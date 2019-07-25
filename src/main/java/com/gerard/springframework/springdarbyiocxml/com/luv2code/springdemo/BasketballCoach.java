@@ -2,6 +2,12 @@ package com.gerard.springframework.springdarbyiocxml.com.luv2code.springdemo;
 
 public class BasketballCoach implements Coach {
 
+    private FortuneService fortuneService;
+
+    public BasketballCoach(FortuneService fortuneService) {
+        this.fortuneService = fortuneService;
+    }
+
     @Override
     public String getDailyWorkout() {
         return "Shoot 10 free throws";
@@ -9,6 +15,6 @@ public class BasketballCoach implements Coach {
 
     @Override
     public String getDailyFortune() {
-        return null;
+        return fortuneService.getFortune();
     }
 }
